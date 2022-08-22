@@ -1,0 +1,239 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ScriptCore/AoC</title>
+    <link rel="stylesheet" href="C:\Users\Alex\Desktop\vs\ScriptCore.css">
+</head>
+<body>
+    <style>
+
+body::-webkit-scrollbar {
+    width: 1px;               /* width of the entire scrollbar */
+  }
+  body::-webkit-scrollbar-track {
+    background: rgb(14, 14, 14);        /* color of the tracking area */
+  }
+  body::-webkit-scrollbar-thumb {
+    background-color: rgb(29, 29, 29);    /* color of the scroll thumb */
+    border-radius: 20px;       /* roundness of the scroll thumb */
+    border: 3px solid rgb(63, 63, 63);  /* creates padding around scroll thumb */
+  }
+        .Title{
+            padding-left: 20px;
+            padding-right: 20px;
+display: block;
+font-family: sans-serif;
+color: white;
+text-align: center;
+text-decoration: underline;
+}
+
+.slogan{
+   
+    font-family: sans-serif;
+    color: rgb(255, 255, 255);
+    display: block;
+  font-size: 20px;
+  margin-top: -30px;
+    text-align: center;
+}
+body{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    background-size:cover;
+    background-color: rgb(131, 131, 8);;
+}
+body{
+    background-position: center;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-color: rgb(20, 20, 20);
+}
+.TypeBox{
+   text-align: center;
+   margin-top:  10px;
+}
+.MainContent{
+    margin-top: 130px;
+    display: flex;
+    display: block;
+    align-items: center;
+user-select: none;
+box-shadow: 0px 0px 10px orangered;
+    border: 1px orangered solid;
+border-radius: none;
+background-color: transparent;
+color: white;
+background-color: rgb(20, 20, 20);
+
+}
+.TypeBox2{
+    border-style: none;
+    outline: none;
+    text-align: center;
+    height: 30px;
+    border-radius: 5px;
+    transition: 0.5s;
+    user-select: none;
+    font-size: medium;
+}
+.SearchBtn{
+    border-style: none;
+    padding-left: 25px;
+    padding-right: 25px;
+    background-color: orangered;
+    color: white;
+    height: 30px;
+    border-radius: 5px;
+    transition:  0.5s;
+    user-select: none;
+    
+}
+.SearchBtn:hover{
+    background-color: rgb(0, 0, 0);
+    color: white;
+}
+.TypeBox2:hover{
+    background-color: black;
+    color: rgb(255, 255, 255);
+}
+
+.Btn1, .Btn2{
+    display: inline-block;
+    border-style: none;
+    border-radius: 5px;
+    width: 100px;
+    height: 40px;
+    background-color: black;
+    font-size: larger;
+    color: white;
+    font-family: sans-serif;
+    margin-right: 10px;
+transition: 0.3s;
+}
+.Btn1:hover, .Btn2:hover{
+    opacity: 50%;
+    text-decoration: underline;
+}
+
+.link{
+    color: black;
+}
+
+.ToS{
+    border-style: none;
+    background-color: black;
+    color: white;
+    text-align: center;
+    border-radius: 5px;
+    margin-top: 120px;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    font-family: sans-serif;
+    user-select: none;
+    transition: 0.3s;
+    box-shadow: 0px 0px 10px orangered;
+    border: 1px orangered solid;
+border-radius: none;
+background-color: transparent;
+color: white;
+background-color: rgb(20, 20, 20);
+}
+.ToS:hover{
+    opacity: 50%;
+}
+.TosTitle{
+    font-size: larger;
+    user-select: none;
+}
+.Btn2{
+    color:orangered
+}
+#setBtn, #thu, #tho {
+    box-shadow: 0px 0px 10px orangered;
+    border: 1px orangered solid;
+border-radius: none;
+background-color: transparent;
+color: white;
+font-family: sans-serif;
+font-size: larger;
+transition: 0.3s;
+height: 50px
+}
+
+
+#thu, #tho{
+    margin-left: 115px;
+    margin-top: 10px;
+    display: inline-block;
+}
+#thu:hover{
+    opacity: 50%;
+    background-color: black;
+}
+#tho:hover{
+    opacity: 50%;
+    background-color: black;
+}
+#setBtn{
+    margin-top: 30px;
+}
+#setBtn:hover{
+    background-color: black;
+}
+.setTitle, .setTitle2{
+    font-family: sans-serif;
+    font-size: 30px;
+    color: white;
+    text-align: center;
+}
+.setDiv{
+    background-color: black;
+    width: 525px;
+    height: 340px;
+    align-items: center;
+    box-shadow: 0px 0px 10px orangered;
+    border: 1px orangered solid;
+border-radius: none;
+background-color: transparent;
+margin-top: 80px;
+padding-right: -100px;
+}
+.setDivCenter{
+    text-align: center;
+}
+    </style>
+
+
+<div class="setDiv">
+<p class="setTitle">AGE OF CONSENT</p>
+<p class="setTitle2">I am...</p>
+<button id="thu">  </button>
+<button id="tho">over 13</button>
+<p class="setDivCenter">
+<a href="https://sharkcores.github.io/scriptcore/">
+    <button id="setBtn">Enter ScriptCore</button>
+</a>
+</p>
+</div>
+<script>
+    document.getElementById("setBtn").disabled = true
+    document.getElementById("setBtn").innerHTML = "Waiting for client to pick.."
+    document.getElementById("thu").innerHTML = "under 13"
+
+    document.getElementById("thu").onclick = function(){
+        document.getElementById("setBtn").disabled = true
+        document.getElementById("setBtn").innerHTML = "Locked"
+    }
+    document.getElementById("tho").onclick = function(){
+        document.getElementById("setBtn").innerHTML = "Enter ScriptCore"
+        document.getElementById("setBtn").disabled = false
+    }
+</script>
+</body>
+</html>
